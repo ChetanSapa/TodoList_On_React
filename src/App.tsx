@@ -13,7 +13,7 @@ export type TaskType = {
 }
 
 
-type TasksStateType = {
+export type TasksStateType = {
     [key: string]: Array<TaskType>
 }
 
