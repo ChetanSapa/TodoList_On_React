@@ -1,7 +1,6 @@
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import {Box, Button, FormControl, IconButton, TextField} from '@material-ui/core';
 import {AddBox} from '@material-ui/icons';
-import React, {ChangeEvent} from 'react'
-import { useState } from 'react'
 
 type AddItemFormPropsType = {
     addItem: (title: string) => void
@@ -26,7 +25,7 @@ export const AddItemForm = React.memo(function(props: AddItemFormPropsType) {
         setTitle(e.currentTarget.value)
     }
 
-    const onKeyPressHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
         if (error !== null) {
             setError(null);
         }
